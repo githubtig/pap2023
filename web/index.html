@@ -92,16 +92,36 @@ Embarcamos nesta aventura em 2020 na EPRIN e agora o nosso sonho está a tornar-
         <p class="subtitle">Aqui podes consultar o tempo de que dispões para concluir cada uma das fases de execução da PAP.<br>NÃO TE ATRASES!</p>
       </div>
       <div class="paps">
-        <div class="paps">
-		<script src="https://cdn.logwork.com/widget/countdown.js"></script>
-<a href="https://logwork.com/countdown-wipu" class="countdown-timer" data-style="circles" data-timezone="Europe/Lisbon" data-language="pt" data-date="2022-10-07 12:00">Entregar ao Diretor de Turma uma versão impressa do documento resumo.</a>
-	</div>
-	<div class="paps">
-		<script src="https://cdn.logwork.com/widget/countdown.js"></script>
-<a href="https://logwork.com/countdown-wipu" class="countdown-timer" data-style="circles" data-timezone="Europe/Lisbon" data-language="pt" data-date="2023-07-11 10:00">Apresentação e Defesa da PAP</a>
-        </div>
+            <h3>07/10/2022 - Entregar ao Diretor de Turma cópia impressa com o Resumo da Pap</h3>
+	    <ul>
+	      <li><span id="days"></span>days</li>
+	      <li><span id="hours"></span>Hours</li>
+	      <li><span id="minutes"></span>Minutes</li>
+	      <li><span id="seconds"></span>Seconds</li>
+	    </ul>
       </div>
     </section>
   </main>
+  <script>
+ 	(function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+  const countDown = new Date("31/10/2022").getTime(),
+      x = setInterval(function() {    
+
+        const now = new Date().getTime(),
+              distance = countDown - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+      }, 0)
+  }());
+  </script>
 </body>
 </html>
