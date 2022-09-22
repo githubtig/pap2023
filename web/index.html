@@ -85,45 +85,52 @@ Embarcamos nesta aventura em 2020 na EPRIN e agora o nosso sonho está a tornar-
       </div>
     </section>
 	
+	
 
       <!-- estilos para o contador -->
       	<style>
 		#timer {
-		  font-size: 3em;
+		  font-size: 2em;
 		  font-weight: 100;
 		  color: black;
 		  text-shadow: 0 0 20px #48c8ff;
-		  align: center;
 		}
 
 		#timer div {
 		  display: inline-block;
 		  min-width: 90px;
-		text-align: center;
-		  padding: 70px 50px;
-		  background: #0d1a29;
+
+		  padding: 7px 2px;
+		  background: #fff;
 		  font-family: sans-serif;
 		  font-weight: lighter;
 		}
 
 		#timer div span {
-		  color: #b1cdf1;
+		  color: black;
 		  display: block;
 		  font-size: 0.35em;
-		  font-weight: 400;
 		}
 
 	</style>
-	<div style="text-align: center;">
-		<h2>Informações sobre a PAP</h2>
+	<div style="text-align: center;>
+		<h2">CRONOGRAMA DAS ATIVIDADES</h2>
 		<hr>
-		<p>Aqui podes consultar o tempo de que dispões para concluir cada uma das fases de execução da PAP.<br>NÃO TE ATRASES!</p>
-        </div>
-            
-	    <div id="timer" style="padding-top: 100px;"><h3>07/10/2022 - Entregar ao Diretor de Turma cópia impressa com o Resumo da Pap</h3></div>
+		<h4>Aqui podes consultar o tempo de que dispões para concluir cada uma das fases de execução da PAP.<br>NÃO TE ATRASES!</h4>  
+  
+		<div id="timer">   
+	    	<div id="timer1"></div><br>
+	    	<div id="timer2"></div><br>
+	    	<div id="timer3"></div><br>
+	    	<div id="timer4"></div><br>
+	    	<div id="timer5"></div><br>
+	    	<div id="timer6"></div><br>
+	    	<div id="timer7"></div><br>
+	    </div>
+	</div>
   </main>
   <script>
-	function updateTimer() {
+	function updateTimer1() {
 	  future = Date.parse("oct 7, 2022 12:00:00");
 	  now = new Date();
 	  diff = future - now;
@@ -138,21 +145,222 @@ Embarcamos nesta aventura em 2020 na EPRIN e agora o nosso sonho está a tornar-
 	  m = mins - hours * 60;
 	  s = secs - mins * 60;
 
-	  document.getElementById("timer").innerHTML =
+	  document.getElementById("timer1").innerHTML =
+	    "<div 'style=text-align: left;'>" +
+	    "<span style='font-size: 0.55em;'>07/10/2022 até às 12h00m - Entregar cópia impressa com o Resumo da Pap</span></div><br>" +
 	    "<div>" +
 	    d +
-	    "<span>days</span></div>" +
+	    "<span>dias</span></div>" +
 	    "<div>" +
 	    h +
-	    "<span>hours</span></div>" +
+	    "<span>horas</span></div>" +
 	    "<div>" +
 	    m +
-	    "<span>minutes</span></div>" +
+	    "<span>minutos</span></div>" +
 	    "<div>" +
 	    s +
-	    "<span>seconds</span></div>";
+	    "<span>segundos</span></div>";
 	}
-	setInterval("updateTimer()", 1000);
+	setInterval("updateTimer1()", 1000);
+
+	function updateTimer2() {
+	  future = Date.parse("oct 10, 2022 10:50:00");
+	  now = new Date();
+	  diff = future - now;
+
+	  days = Math.floor(diff / (1000 * 60 * 60 * 24));
+	  hours = Math.floor(diff / (1000 * 60 * 60));
+	  mins = Math.floor(diff / (1000 * 60));
+	  secs = Math.floor(diff / 1000);
+
+	  d = days;
+	  h = hours - days * 24;
+	  m = mins - hours * 60;
+	  s = secs - mins * 60;
+
+	  document.getElementById("timer2").innerHTML =
+	    "<div style='text-align: left;'>" +
+	    "<span style='font-size: 0.55em;'>10/10/2022 pelas 10h50m - Reunião para validar propostas do resumo</span></div><br>" +
+	    "<div>" +
+	    d +
+	    "<span>dias</span></div>" +
+	    "<div>" +
+	    h +
+	    "<span>horas</span></div>" +
+	    "<div>" +
+	    m +
+	    "<span>minutos</span></div>" +
+	    "<div>" +
+	    s +
+	    "<span>segundos</span></div>";
+	}
+	setInterval("updateTimer2()", 1000);
+	
+	function updateTimer3() {
+	  future = Date.parse("oct 17, 2022 10:50:00");
+	  now = new Date();
+	  diff = future - now;
+
+	  days = Math.floor(diff / (1000 * 60 * 60 * 24));
+	  hours = Math.floor(diff / (1000 * 60 * 60));
+	  mins = Math.floor(diff / (1000 * 60));
+	  secs = Math.floor(diff / 1000);
+
+	  d = days;
+	  h = hours - days * 24;
+	  m = mins - hours * 60;
+	  s = secs - mins * 60;
+
+	  document.getElementById("timer3").innerHTML =
+	    "<div style='text-align: left;'>" +
+	    "<span style='font-size: 0.55em;'>17/10/2022 pelas 10h50m - Reunião para 1º recurso do resumo</span></div><br>" +
+	    "<div>" +
+	    d +
+	    "<span>dias</span></div>" +
+	    "<div>" +
+	    h +
+	    "<span>horas</span></div>" +
+	    "<div>" +
+	    m +
+	    "<span>minutos</span></div>" +
+	    "<div>" +
+	    s +
+	    "<span>segundos</span></div>";
+	}
+	setInterval("updateTimer3()", 1000);
+	
+	function updateTimer4() {
+	  future = Date.parse("oct 24, 2022 10:50:00");
+	  now = new Date();
+	  diff = future - now;
+
+	  days = Math.floor(diff / (1000 * 60 * 60 * 24));
+	  hours = Math.floor(diff / (1000 * 60 * 60));
+	  mins = Math.floor(diff / (1000 * 60));
+	  secs = Math.floor(diff / 1000);
+
+	  d = days;
+	  h = hours - days * 24;
+	  m = mins - hours * 60;
+	  s = secs - mins * 60;
+
+	  document.getElementById("timer4").innerHTML =
+	    "<div style='text-align: left;'>" +
+	    "<span style='font-size: 0.55em;'>24/10/2022 pelas 10h50m - Reunião para 2º recurso do resumo</span></div><br>" +
+	    "<div>" +
+	    d +
+	    "<span>dias</span></div>" +
+	    "<div>" +
+	    h +
+	    "<span>horas</span></div>" +
+	    "<div>" +
+	    m +
+	    "<span>minutos</span></div>" +
+	    "<div>" +
+	    s +
+	    "<span>segundos</span></div>";
+	}
+	setInterval("updateTimer4()", 1000);
+	
+	function updateTimer5() {
+	  future = Date.parse("mar 27, 2023 12:00:00");
+	  now = new Date();
+	  diff = future - now;
+
+	  days = Math.floor(diff / (1000 * 60 * 60 * 24));
+	  hours = Math.floor(diff / (1000 * 60 * 60));
+	  mins = Math.floor(diff / (1000 * 60));
+	  secs = Math.floor(diff / 1000);
+
+	  d = days;
+	  h = hours - days * 24;
+	  m = mins - hours * 60;
+	  s = secs - mins * 60;
+
+	  document.getElementById("timer5").innerHTML =
+	    "<div style='text-align: left;'>" +
+	    "<span style='font-size: 0.55em;'>27/03/2023 até às 12h00m - Entregar a Autovaliação na avaliação intermédia</span></div><br>" +
+	    "<div>" +
+	    d +
+	    "<span>dias</span></div>" +
+	    "<div>" +
+	    h +
+	    "<span>horas</span></div>" +
+	    "<div>" +
+	    m +
+	    "<span>minutos</span></div>" +
+	    "<div>" +
+	    s +
+	    "<span>segundos</span></div>";
+	}
+	setInterval("updateTimer5()", 1000);
+	
+	function updateTimer6() {
+	  future = Date.parse("jul 6, 2023 12:00:00");
+	  now = new Date();
+	  diff = future - now;
+
+	  days = Math.floor(diff / (1000 * 60 * 60 * 24));
+	  hours = Math.floor(diff / (1000 * 60 * 60));
+	  mins = Math.floor(diff / (1000 * 60));
+	  secs = Math.floor(diff / 1000);
+
+	  d = days;
+	  h = hours - days * 24;
+	  m = mins - hours * 60;
+	  s = secs - mins * 60;
+
+	  document.getElementById("timer6").innerHTML =
+	    "<div style='text-align: left;'>" +
+	    "<span style='font-size: 0.55em;'>06/07/2023 até às 12h00m - Entregar Relatório e Projeto Final</span></div><br>" +
+	    "<div>" +
+	    d +
+	    "<span>dias</span></div>" +
+	    "<div>" +
+	    h +
+	    "<span>horas</span></div>" +
+	    "<div>" +
+	    m +
+	    "<span>minutos</span></div>" +
+	    "<div>" +
+	    s +
+	    "<span>segundos</span></div>";
+	}
+	setInterval("updateTimer6()", 1000);
+	
+	function updateTimer7() {
+	  future = Date.parse("jul 11, 2023 10:00:00");
+	  now = new Date();
+	  diff = future - now;
+
+	  days = Math.floor(diff / (1000 * 60 * 60 * 24));
+	  hours = Math.floor(diff / (1000 * 60 * 60));
+	  mins = Math.floor(diff / (1000 * 60));
+	  secs = Math.floor(diff / 1000);
+
+	  d = days;
+	  h = hours - days * 24;
+	  m = mins - hours * 60;
+	  s = secs - mins * 60;
+
+	  document.getElementById("timer7").innerHTML =
+	    "<div style='text-align: left;'>" +
+	    "<span style='font-size: 0.55em;'>11/07/2023 a partir das 10h00m - Apresentação e Defesa do Projeto Final</span></div><br>" +
+	    "<div>" +
+	    d +
+	    "<span>dias</span></div>" +
+	    "<div>" +
+	    h +
+	    "<span>horas</span></div>" +
+	    "<div>" +
+	    m +
+	    "<span>minutos</span></div>" +
+	    "<div>" +
+	    s +
+	    "<span>segundos</span></div>";
+	}
+	setInterval("updateTimer7()", 1000);
    </script>
+
 </body>
 </html>
