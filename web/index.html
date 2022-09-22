@@ -86,42 +86,70 @@ Embarcamos nesta aventura em 2020 na EPRIN e agora o nosso sonho está a tornar-
     </section>
 	
     <section id="paps">
-      <div class="section-header">
+      <!-- estilos para o contador -->
+      	<style>
+		#timer {
+		  font-size: 3em;
+		  font-weight: 100;
+		  color: white;
+		  text-shadow: 0 0 20px #48c8ff;
+		}
+
+		#timer div {
+		  display: inline-block;
+		  min-width: 90px;
+		}
+
+		#timer div span {
+		  color: #b1cdf1;
+		  display: block;
+		  font-size: 0.35em;
+		  font-weight: 400;
+		}
+
+	</style>
+	<div class="section-header">
         <h2 class="section-title">Informações sobre a PAP</h2>
         <hr>
         <p class="subtitle">Aqui podes consultar o tempo de que dispões para concluir cada uma das fases de execução da PAP.<br>NÃO TE ATRASES!</p>
       </div>
       <div class="paps">
             <h3>07/10/2022 - Entregar ao Diretor de Turma cópia impressa com o Resumo da Pap</h3>
-	    <ul>
-	      <li><span id="days"></span>days</li>
-	      <li><span id="hours"></span>Hours</li>
-	      <li><span id="minutes"></span>Minutes</li>
-	      <li><span id="seconds"></span>Seconds</li>
-	    </ul>
+	    <div id="timer" style="padding-top: 100px;"></div>
       </div>
     </section>
   </main>
   <script>
- 	(function () {
-  const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
+	function updateTimer() {
+	  future = Date.parse("dec 2, 2020 11:30:00");
+	  now = new Date();
+	  diff = future - now;
 
-  const countDown = new Date("10/31/2022").getTime(),
-      x = setInterval(function() {    
+	  days = Math.floor(diff / (1000 * 60 * 60 * 24));
+	  hours = Math.floor(diff / (1000 * 60 * 60));
+	  mins = Math.floor(diff / (1000 * 60));
+	  secs = Math.floor(diff / 1000);
 
-        const now = new Date().getTime(),
-              distance = countDown - now;
+	  d = days;
+	  h = hours - days * 24;
+	  m = mins - hours * 60;
+	  s = secs - mins * 60;
 
-        document.getElementById("days").innerText = Math.floor(distance / (day)),
-          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-
-      }, 0)
-  }());
-  </script>
+	  document.getElementById("timer").innerHTML =
+	    "<div>" +
+	    d +
+	    "<span>days</span></div>" +
+	    "<div>" +
+	    h +
+	    "<span>hours</span></div>" +
+	    "<div>" +
+	    m +
+	    "<span>minutes</span></div>" +
+	    "<div>" +
+	    s +
+	    "<span>seconds</span></div>";
+	}
+	setInterval("updateTimer()", 1000);
+   </script>
 </body>
 </html>
