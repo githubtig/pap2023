@@ -87,12 +87,12 @@ main {
   transition: transform 150ms, box-shadow 150ms;
 }
 
-#our-services {
+#p-alunos {
   margin-top: 190px;
   margin-bottom: 190px;
 }
 
-#our-services .section-header {
+#p-alunos .section-header {
   text-align: center;
   margin: 0 auto;
   max-width: 952px;
@@ -100,13 +100,13 @@ main {
   margin-bottom: 50px;
 }
 
-#our-services .section-header .section-title {
+#p-alunos .section-header .section-title {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 26px;
 }
 
-#our-services .section-header hr {
+#p-alunos .section-header hr {
   border-bottom: 2px solid black;
   width: 56px;
 
@@ -114,20 +114,20 @@ main {
   margin: 0 auto;
 }
 
-#our-services .section-header .subtitle {
+#p-alunos .section-header .subtitle {
   margin-top: 26px;
   font-size: 18px;
   color: #7D7987;
   font-weight: 300;
 }
 
-#our-services .services {
+#p-alunos .services {
   display: flex;
   flex-wrap: wrap; /* Quebra os elementos */
   /* padding: 0 40px; */
 }
 
-#our-services .services .service {
+#p-alunos .services .service {
   background-color: #fff;
   margin: 17px;
   padding: 40px;
@@ -136,15 +136,15 @@ main {
   flex: 1 1 400px;
 }
 
-#our-services .services .service img {
+#p-alunos .services .service img {
   margin-bottom: 22px;
 }
 
-#our-services .services .service h3 {
+#p-alunos .services .service h3 {
   margin-bottom: 22px;
 }
 
-#our-services .services .service p {
+#p-alunos .services .service p {
   font-size: 16px;
   color: #7D7987;
 }
