@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <button onclick="topFunction()" id="myBtn" title="Voltar ao Menu">Top</button>
+  <button onclick="topFunction()" id="myBtn" title="Voltar ao Menu">Topo"</button>
   <header>
     <nav id="navbar">
       <ul class="nav-list">
@@ -125,6 +125,27 @@ Embarcamos nesta aventura em 2020 na EPRIN e agora o nosso sonho está a tornar-
 	</div>
      </section>
   </main>
+     <script>
+
+let mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
   <script>
 	function updateTimer1() {
 	  future = Date.parse("oct 7, 2022 12:00:00");
@@ -357,26 +378,6 @@ Embarcamos nesta aventura em 2020 na EPRIN e agora o nosso sonho está a tornar-
 	}
 	setInterval("updateTimer7()", 1000);
    </script>
-   <script>
 
-let mybutton = document.getElementById("myBtn");
-
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
 </body>
 </html>
