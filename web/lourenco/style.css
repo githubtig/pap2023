@@ -5,19 +5,35 @@
 }
 
 body {
-    background-image: url('./pexels-fauxels-3183197.jpg');
-    background-size: 100%;
-}
-
-div {
-    padding-top: 50vh;
-    text-align: center;
-    color: white;
-}
-
-h1 {
+    padding: 0 6rem;
+    margin-top: 20vh;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 45px;
-    text-shadow: 5px 2px 2px black;
+    color: white;
+    background-color: #7162A6;
+    font-size: 20px;
 }
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: 0.3s;
+}
+
+.flex-container:hover {
+    background-color: #429FB3;
+    cursor: pointer;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.454);
+}
+
+.image img {
+    width: 10rem;
+    clip-path: circle();
+}
+
+/*#429FB3*/
